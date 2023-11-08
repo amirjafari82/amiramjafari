@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="hero">
+    {% include 'inc/messages.html' %}
+    <div class="container content">
+        <div class="hero-content">
+            <p class="intro">سلام اسم من <span>امیر</span> هست.</p>
+            <h1 class="work">
+                برنامه نویس
+                <span>وب</span>
+            </h1>
+            <div class="create-project">
+                <p>
+                    پروژه ای در ذهن دارید؟
+                </p>
+                <a href="{% url 'projectreq:projectreq' %}">ساخت پروژه</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{% static 'images/man-1.png' %}" alt="">
+        </div>
+    </div>
+</div>
+<div class="services">
+    <div>
+        <div class="title-section container">
+            <div class="back-text">
+                <h1>خدمات</h1>
+            </div>
+            <h1 class="title">خدمات من</h1>
+        </div>
+        <div class="services-item">
+            <div class="item">
+                <div class="top">
+                    <div class="logo">
+                        <span class="material-symbols-outlined">
+                            design_services
+                        </span>
+                    </div>
+                    <h1 class="service-title">طراحی وب</h1>
+                </div>
+                <p>
+                    طراحی قالب های خلاقانه و کاملا ریسپانسیو با در نظر گرفتن اصول UX/UI
+                </p>
+            </div>
+            <div class="item">
+                <div class="top">
+                    <div class="logo">
+                        <span class="material-symbols-outlined">
+                            code
+                        </span>
+                    </div>
+                    <h1 class="service-title">برنامه نویسی وب</h1>
+                </div>
+                <p>
+                    برنامه نویسی سیستم های قدرتمند و خودکار و بهینه ی تحت وب با زبان قدرتمند پایتون و فریمورک Django (جنگو)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="weblog index">
+    <div class="container">
+        <div class="title-section">
+            <div class="back-text">
+                <h1>رویدادها</h1>
+            </div>
+            <h1 class="title">وبلاگ</h1>
+        </div>
+        <div class="weblog-items">
+            {% for article in articles|slice:":3" %}
+                <div class="item">
+                    <div class="post-img">
+                        <a href="{% url 'weblog:redirect_task' article.id %}">
+                            <img src="{{article.image.url}}" alt="" class="weblog-img">
+                        </a>
+                    </div>
+                    <div class="weblog-content">
+                        <h3 class="weblog-title">
+                            <a href="{% url 'weblog:redirect_task' article.id %}">{{article.title}}</a>
+                        </h3>
+                        <p class="weblog-desc">
+                            {{article.body|safe|truncatechars:100}}
+                        </p>
+                        <a href="{% url 'weblog:redirect_task' article.id %}" class="read-more">
+                            ادامه خواندن
+                            <div class="line"></div>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="project">
+    <div class="container">
+        <h1>آیا شما یک پروژه در ذهن دارید؟</h1>
+        <p>بیاید در مورد اهداف خود صحبت کنیم</p>
+        <a href="{% url 'projectreq:projectreq' %}">شروع کنیم</a>
+    </div>
+</div>
+
+<div class="contact-me" id="contact-me">
+    <div>
+        <div class="title-section container">
+            <div class="back-text">
+                <h1>تماس با من</h1>
+            </div>
+            <h1 class="title">تماس بگیرید</h1>
+        </div>
+        <div class="row container">
+            <div class="getintouch">
+                <div class="info">
+                    <h1>در تماس باشید</h1>
+                    <p>آدرس: ایران، تهران، ستارخان</p>
+                    <p>ایمیل: <a href="/">amiramjafaridev@gmail.com</a></p>
+                    <p>تلفن: 09398708391</p>
+                </div>
+                <div class="social-media">
+                    <h1>شبکه های اجتماعی من</h1>
+                    <div class="media">
+                        <a href="https://instagram.com/amiirm.jf"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://t.me/Amiram_Jafari"><i class='bx bxl-telegram'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="message-form">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <input type="submit" class="send-meesage" value="ارسال پیام">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

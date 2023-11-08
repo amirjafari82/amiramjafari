@@ -1,0 +1,39 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% load jformat %}
+
+{% block content %}
+<div class="article-detail">
+    <div class="container">
+        <div class="back">
+            <a href="{% url 'weblog:weblog' %}">
+                بازگشت
+                <span class="material-symbols-outlined">
+                    keyboard_backspace
+                </span>
+            </a>
+        </div>
+        <div class="article-title">
+            <h1>{{article.title}}</h1>
+        </div>
+        <span class="day">{{article.created|jformat:"%A"}}</span>
+        <span class="nday">{{article.created|jformat:"%d"}}</span>
+        <span class="month">{{article.created|jformat:"%B"}}</span>
+        <span class="year">{{article.created|jformat:"%Y"}}</span>
+        <span class="time">- {{article.created|jformat:"%H:%M"}}</span>
+        <br>
+        <span class="views">
+            <span class="material-symbols-outlined">
+            visibility
+            </span>
+            {{article.view}}
+        </span>
+        <div class="article-image">
+            <img src="{{article.image.url}}" alt="">
+        </div>
+        <div class="content">
+            <p>{{article.body|safe}}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

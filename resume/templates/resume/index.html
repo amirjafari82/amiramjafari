@@ -1,0 +1,20 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block content %}
+<div class="resume">
+    <div class="container">
+        <h2>نمونه کارهای من</h2>
+        <div class="items">
+            {% for resume in resumes %}
+            <a href="{{resume.link}}" target="_blank" class="item">
+                <div class="image">
+                    <img src="{{resume.image.url}}" alt="" />
+                </div>
+                <h4>{{resume.webname}}</h4>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

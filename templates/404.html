@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="page-404">
+    <div class="container">
+        <div class="img-404">
+            <img src="{% static 'images/404-Error.gif' %}" alt="">
+        </div>
+        <h1 class="not-found">صفحه مورد نظر پیدا نشد :(</h1>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="aboutme">
+    <div class="container">
+        <div class="content">
+            <p class="intro">
+                من امیرمحمد جعفری نسب هستم (امیر جعفری بگید راحت تره)
+            </p>
+            <p class="desc">
+                من از وقتی که یادم میاد به کامپیوتر و تکنولوژی علاقه داشتم و تا همین الان که 20 سالمه دست از علاقم برنداشتم و همیشه دنبال یاد گرفتن و آموزش دیدن در این حوزه هستم. <br>
+                الان دانشجوی رشته مهندسی کامپیوتر هستم و علاقه شدیدی به حوزه ی برنامه نویسی و طراحی صفحات وب و پیشرفت در این زمینه دارم.
+            </p>
+            <p style="margin-top: 10px;">
+                در زمینه برنامه نویسی وب با جنگو کار میکنم که واقعا کار باهاش لذت بخشه.
+            </p>
+            <p style="margin-top: 10px;">
+                در زمینه طراحی قالب وبسایت از HTML و CSS استفاده میکنم. (کاملا ریسپانسیو)
+            </p>
+            <div class="talents">
+                <h3>
+                    من چیا بلدم؟
+                </h3>
+                <div class="talent-progress">
+                    <p class="talent">HTML</p>
+                    <div class="progress">
+                        <div class="value value-80">
+                            <span>80%</span>
+                        </div>
+                    </div>
+                    <p class="talent">CSS</p>
+                    <div class="progress">
+                        <div class="value value-75">
+                            <span>75%</span>
+                        </div>
+                    </div>
+                    <p class="talent">Javascript</p>
+                    <div class="progress">
+                        <div class="value value-50">
+                            <span>50%</span>
+                        </div>
+                    </div>
+                    <p class="talent">Python</p>
+                    <div class="progress">
+                        <div class="value value-85">
+                            <span>85%</span>
+                        </div>
+                    </div>
+                    <p class="talent">Django</p>
+                    <div class="progress">
+                        <div class="value value-80">
+                            <span>80%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="{% static 'images/programmer-man.png' %}" alt="programmer" title="Programmer">
+    </div>
+</div>
+
+{% endblock %}

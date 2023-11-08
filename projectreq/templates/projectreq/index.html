@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block content %}
+<div class="request-project">
+    {% include 'inc/messages.html' %}
+    <div class="container">
+        <div class="form">
+            <form action="" method="post">
+                {% csrf_token %} {{form.as_p}}
+                <input type="submit" value="درخواست" />
+            </form>
+        </div>
+        <div class="explaination">
+            <h1>
+                توضیحات
+            </h1>
+            <ul>
+                <li>1- پس از ثبت درخواست لطفا منتظر بمانید تا با شما تماس گرفته بشه.</li>
+                <li>2- پس از ثبت درخواست از ثبت دوباره درخواست خودداری کنید.</li>
+                <li>3- ترجیحا از شماره تماس دارای واتساپ یا تلگرام استفاده کنید.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
