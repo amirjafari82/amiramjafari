@@ -21,3 +21,11 @@
 
 بخش صفحه اصلی وبلاگ:
 ![image](https://github.com/user-attachments/assets/5f473937-c8d3-48fe-8984-83d6c19e7b5d)
+
+دقت داشته باشید که این سایت کاملا ریسپانسیو میباشد.
+برای مثال:
+
+دو بحش hero و منوی سایت:
+
+![image](https://github.com/user-attachments/assets/f957dedc-3f91-4389-bd04-8dc95080fa3f)
+![image](https://github.com/user-attachments/assets/e00cd3f7-f833-4899-bd16-a04a252d49b6)
