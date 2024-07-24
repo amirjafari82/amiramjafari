@@ -16,3 +16,8 @@
  بخش درباره من:
  ![image](https://github.com/user-attachments/assets/fc5122f1-ee2b-4883-b7d2-4a8620cdd64f)
 
+بخش نمونه کارها:
+![image](https://github.com/user-attachments/assets/fadfac3f-6e1e-42d1-b986-778aac42b4f3)
+
+بخش صفحه اصلی وبلاگ:
+![image](https://github.com/user-attachments/assets/5f473937-c8d3-48fe-8984-83d6c19e7b5d)
